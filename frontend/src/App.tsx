@@ -40,7 +40,7 @@ function App() {
 
       // 在调用 setTodos 之前检查响应数据是否为数组
       if (Array.isArray(response.data)) {
-        setTodos(response.data); // 使用从后端获取的数据更新 todos 状态
+      setTodos(response.data); // 使用从后端获取的数据更新 todos 状态
         console.log('fetchTodos: response.data 是数组，已更新状态。'); // Log: Data is array, state updated
       } else {
         console.error('fetchTodos: 错误 - 后端响应数据不是一个数组! Data:', response.data); // Log Error: Response data is not an array

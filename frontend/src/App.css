@@ -86,14 +86,14 @@ h1 {
   /* Make checkbox slightly larger */
   width: 18px;
   height: 18px;
-}
+  }
 
 .todo-text {
   flex-grow: 1;
   margin-right: 10px;
   color: #333;
   transition: color 0.2s ease, text-decoration 0.2s ease;
-}
+  }
 
 .todo-item.completed .todo-text {
   text-decoration: line-through;
