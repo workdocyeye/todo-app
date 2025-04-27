@@ -31,7 +31,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./backend # Dockerfile 所在的上下文路径
-          file: ./Dockerfile # <--- CHANGE HERE: Path relative to context
+          file: ./backend/Dockerfile # <--- CHANGE BACK: Path relative to root
           push: true # 推送到仓库
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/todo-backend:latest # 镜像标签，使用用户名和 'latest'
 
@@ -39,6 +39,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./frontend # Dockerfile 所在的上下文路径
-          file: ./Dockerfile # <--- CHANGE HERE: Path relative to context
+          file: ./frontend/Dockerfile # <--- CHANGE BACK: Path relative to root
           push: true # 推送到仓库
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/todo-frontend:latest # 镜像标签 
